@@ -1,7 +1,7 @@
 /**
  * This file contains methods for control page
  *
- * Created by kulyadredd on 9/1/16.
+ * Created by Kulinenko Roman
  */
 app.factory('userService', function ($http, $q) {
 

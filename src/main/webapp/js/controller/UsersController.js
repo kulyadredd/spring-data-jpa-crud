@@ -3,8 +3,7 @@
  *
  * Created by Kulinenko Roman
  */
-app.controller("usersController", function ($scope, serverService, modalService,
-     userService) {
+app.controller("usersController", function ($scope, serverService, modalService, userService) {
 
     $scope.itemPerPage = 5;
     $scope.defaultPage = 1;
