@@ -1,6 +1,6 @@
 package com.app.controller;
 
-import com.app.MySpringAppApplication;
+import com.app.SpringDataJpaApplication;
 import com.app.models.jpa.User;
 import com.app.service.UserService;
 
@@ -34,7 +34,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * Created by Roman Kulinenko
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = MySpringAppApplication.class)
+@SpringApplicationConfiguration(classes = SpringDataJpaApplication.class)
 @WebAppConfiguration
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 public class UserControllerTests {

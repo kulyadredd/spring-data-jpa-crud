@@ -73,6 +73,7 @@ gulp.task('app-js', function () {
     ])
         .pipe(newer(staticDir + 'app.min.js'))
         .pipe(concat('app.min.js'))
+        .pipe(uglify())
         .pipe(gulp.dest(staticDir))
 });
 

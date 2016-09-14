@@ -1,4 +1,6 @@
 /**
+ * This file contains methods for control page
+ *
  * Created by kulyadredd on 9/1/16.
  */
 app.factory('userService', function ($http, $q) {
@@ -35,8 +37,5 @@ app.factory('userService', function ($http, $q) {
             }
             return pages;
         }
-        // getStartCount: function (currentPage, itemPerPage) {
-        //     return (currentPage * itemPerPage) - itemPerPage;
-        // }
     }
 });

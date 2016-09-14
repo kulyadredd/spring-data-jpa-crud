@@ -1,4 +1,6 @@
 /**
+ * Controller that handles all user action
+ *
  * Created by Kulinenko Roman
  */
 app.controller("usersController", function ($scope, serverService, modalService,

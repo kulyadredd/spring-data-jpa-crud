@@ -9,6 +9,10 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 /**
+ * Class UserService
+ * Service that handle UserController
+ * Use @Autowired for connect to necessary repositories
+ *
  * Created by Kulinenko Roman
  */
 @Service

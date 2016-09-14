@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 
 /**
+ * Class UserController
+ * REST Controller that handles all user request
+ *
  * Created by Kulinenko Roman
  */
 @RestController
@@ -23,7 +26,7 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET, produces = MimeTypeUtils.APPLICATION_JSON_VALUE)
     @ResponseStatus(value = HttpStatus.OK)
     public Page<User> getUsers(HttpServletRequest httpServletRequest,
-                               @RequestParam("page") Integer page, @RequestParam("perPage") Integer perPage) throws Exception {
+            @RequestParam("page") Integer page, @RequestParam("perPage") Integer perPage) throws Exception {
         return userService.getUsers(page, perPage);
     }
 

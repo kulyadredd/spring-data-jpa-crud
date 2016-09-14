@@ -1,4 +1,6 @@
 /**
+ * This file contains main logic in modal window
+ *
  * Created by Kulinenko Roman
  */
 app.factory('modalService', function ($q, serverService, $uibModal) {

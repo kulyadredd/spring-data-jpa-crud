@@ -7,6 +7,9 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 /**
+ * Class User
+ * Entity that holds users's representation
+ *
  * Created by Kulinenko Roman
  */
 @Entity

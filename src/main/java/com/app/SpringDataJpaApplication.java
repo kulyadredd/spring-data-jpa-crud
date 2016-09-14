@@ -4,12 +4,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
+ * Class SpringDataJpaApplication is main, configurable class of application.
+ *
  * Created by Kulinenko Roman
  */
 @SpringBootApplication
-public class MySpringAppApplication {
+public class SpringDataJpaApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MySpringAppApplication.class, args);
+        SpringApplication.run(SpringDataJpaApplication.class, args);
     }
 }
