@@ -14,6 +14,7 @@
 hs_err_pid*
 ### Gradle template
 .gradle
+gradle
 build/
 
 # Ignore Gradle GUI config
@@ -43,3 +44,4 @@ bin
 classes
 node_modules
 src/main/resources/static/
+out
