@@ -42,3 +42,4 @@ gradle-app.setting
 bin
 classes
 node_modules
+src/main/resources/static/
