@@ -1,7 +1,7 @@
 package com.app.controller;
 
 import com.app.SpringDataJpaApplication;
-import com.app.models.jpa.User;
+import com.app.models.User;
 import com.app.service.UserService;
 
 import org.junit.After;

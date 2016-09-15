@@ -1,6 +1,6 @@
 package com.app.service;
 
-import com.app.models.jpa.User;
+import com.app.models.User;
 import com.app.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

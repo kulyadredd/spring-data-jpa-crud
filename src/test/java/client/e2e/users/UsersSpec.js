@@ -4,8 +4,8 @@
 describe('Users page', function() {
 
     beforeEach(function () {
-       browser.get('/#/users');
-       waitUrl('/#/users');
+       browser.get('/users');
+       waitUrl('/users');
     });
 
     function waitUrl(urlInput) {
@@ -21,7 +21,7 @@ describe('Users page', function() {
     }
 
     it("Open user page", function () {
-        expect(browser.getCurrentUrl()).toBe('http://localhost:8080/#/users');
+        expect(browser.getCurrentUrl()).toBe('http://localhost:8080/users');
         expect(element(by.binding('headingTitle')).getText()).toEqual('Data JPA simple CRUD');
     });
 
@@ -73,8 +73,8 @@ describe('Users page', function() {
     it("Test pagination", function () {
         var i = 0;
         while (i <= 20){
-            browser.get('/#/users');
-            waitUrl('/#/users');
+            browser.get('/users');
+            waitUrl('/users');
             checkAvailableElement(element(by.cssContainingText('.btn-success', 'ADD')));
             element(by.cssContainingText('.btn-success', 'ADD')).click();
             checkAvailableElement(element(by.cssContainingText('.modal-title', 'Add new user!')));
@@ -93,8 +93,8 @@ describe('Users page', function() {
 
             i ++;
         }
-        browser.get('/#/users');
-        waitUrl('/#/users');
+        browser.get('/users');
+        waitUrl('/users');
 
         expect(element.all(by.repeater('page in pages')).count()).toBe(5);
 
@@ -115,8 +115,8 @@ describe('Users page', function() {
         checkAvailableElement(element(by.repeater('user in data.content')));
         var i = 0;
         while (i <= 20){
-            browser.get('/#/users');
-            waitUrl('/#/users');
+            browser.get('/users');
+            waitUrl('/users');
             element(by.repeater('user in data.content').row(0)).element(by.css('.btn-danger')).click();
             i++;
         }

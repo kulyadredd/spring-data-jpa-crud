@@ -5,6 +5,8 @@ const flatten = require('gulp-flatten');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const cssmin = require('gulp-cssmin');
+const ngAnnotate = require('gulp-ng-annotate');
+const ngTemplate = require('gulp-angular-templatecache');
 const gulpProtractorAngular = require('gulp-angular-protractor');
 
 const webDir = "src/main/webapp/";
@@ -17,7 +19,8 @@ gulp.task('default', [
     'app-js',
     'source-js',
     'app-css',
-    'source-css'
+    'source-css',
+    'template'
 ]);
 
 gulp.task('source-js', function () {
@@ -73,6 +76,8 @@ gulp.task('app-js', function () {
     ])
         .pipe(newer(staticDir + 'app.min.js'))
         .pipe(concat('app.min.js'))
+        .pipe(ngAnnotate())
+        .pipe(uglify())
         .pipe(gulp.dest(staticDir))
 });
 
@@ -86,6 +91,15 @@ gulp.task('app-css', function () {
         .pipe(gulp.dest(staticDir))
 });
 
+gulp.task('template', function(){
+    gulp.src([
+        "src/main/webapp/views/*.html"
+    ])
+        .pipe(newer(staticDir + 'templates.min.js'))
+        .pipe(ngTemplate({root: "template", module: 'app', standalone: false}))
+        .pipe(concat('templates.min.js'))
+        .pipe(gulp.dest(staticDir));
+});
 
 gulp.task("protractor", function(){
     gulp
